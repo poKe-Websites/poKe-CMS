@@ -10,6 +10,8 @@
  <link href="css/metro.css" rel="stylesheet">
  <link href="css/cover.css" rel="stylesheet">
 <script src="js/metro.js"></script>
+<script src="js/uikit.js"></script>
+<link rel="stylesheet" href="css/uikit.css">
   </head>
   <body>
 
@@ -49,7 +51,7 @@
               </nav>
             </div>
           </div>
-          <div class="card">
+          <div style="background-color: rgba(245, 245, 245, 0.4);" class="card  <?php if (isset($_GET["alert"])) { ?>uk-animation-shake<?php } ?>">
 <form class="form-signin" method="post" action="validate.php">
     <img src="images/photo.png" alt="Card image">
           <div class="inner cover">

@@ -9,8 +9,12 @@
     <link href="css/bootstrap.css" rel="stylesheet">
  <link href="css/metro.css" rel="stylesheet">
 <script src="js/metro.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+
   </head>
   <body>
+   
 
 <div class="app-bar navy"><div class="app-bar-element">Poke Installer</div></div>
 <div class="jumbotron jumbotron-fluid">
@@ -80,7 +84,9 @@ if (!isset($_GET["install"]))
   </fieldset>
    <fieldset class="form-group">
     <label>Poke Password:</label>
-    <input type="password" required="true" name="password_p" class="form-control" id="" placeholder="Password">
+    <input type="password" required="true" name="password_p" class="form-control" id="myPassword" placeholder="Password">
+
+
   </fieldset>
         </div>
         </div>
@@ -112,7 +118,9 @@ if (!isset($_GET["install"]))
 <footer class="footer">
         <p>&copy; Tecflare Corporation</p>
       </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
     <script src="js/bootstrap.js"></script>
+
   </body>
 </html>

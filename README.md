@@ -31,4 +31,4 @@ After you are complete delete your install director.
 
 Contributing
 =============
-Please see our [contributing guidelines](CONTRIBUTING.md) before reporting an issue.
+Contributors are very important for our project because it is the future.

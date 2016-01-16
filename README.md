@@ -1,4 +1,4 @@
-# poKe Multimedia editor
+poKe Multimedia editor
 =============
 
 Our Script will change the way websites are created. Our system will come with many features including support with popular seo tools and a user permission system. We will also be planning to add the features below:
@@ -9,7 +9,7 @@ Our Script will change the way websites are created. Our system will come with m
 0. Social Logins
 0. Mobile Interface
 
-##About poKe
+About poKe
 =============
 
 poKe allows you to create a very awesome website that is great quality and uses bootstrap. It creates a simple user interface for developing and creating a website. This script uses MySQL, bootstrap, and PHP.

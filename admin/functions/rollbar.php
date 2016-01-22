@@ -1,4 +1,12 @@
 <?php
+
+/*
+ * Tecflare Corporation
+ * Copyright Tecflare Corporation
+ * Provided by the Tecflare Corporation System
+ * * Code has been scanned by styleci.io
+ */
+
 /**
  * Singleton-style wrapper around RollbarNotifier.
  *

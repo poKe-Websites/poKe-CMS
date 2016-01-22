@@ -1,6 +1,8 @@
 poKe Multimedia editor
 =============
 
+[![StyleCI](https://styleci.io/repos/49139219/shield)](https://styleci.io/repos/49139219)
+
 Our Script will change the way websites are created. Our system will come with many features including support with popular seo tools and a user permission system. We will also be planning to add the features below:
 
 0. A theming system

@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * Tecflare Corporation
+ * Copyright Tecflare Corporation
+ * Provided by the Tecflare Corporation System
+ * * Code has been scanned by styleci.io
+ */
+
 session_start();
 include '../config.php';
 include 'functions/rollbar.php';

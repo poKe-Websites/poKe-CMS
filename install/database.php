@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * Tecflare Corporation
+ * Copyright Tecflare Corporation
+ * Provided by the Tecflare Corporation System
+ * * Code has been scanned by styleci.io
+ */
+
 $host = $_POST['hostname'];
 $username = $_POST['username'];
 $password = $_POST['password'];

@@ -1,7 +1,7 @@
 <?php
-if (!file_exists("config.php")) {
- header("Location: install/");
- die();
+if (!file_exists('config.php')) {
+    header('Location: install/');
+    die();
 }
 ?>
 

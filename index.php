@@ -1,4 +1,11 @@
- <!DOCTYPE html>
+<?php
+if (!file_exists('config.php')) {
+    header('Location: install/');
+    die();
+}
+?>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">

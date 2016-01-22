@@ -1,6 +1,6 @@
 <?php
-include("../config.php");
-include("functions/header.php");
+include '../config.php';
+include 'functions/header.php';
 ?>
 <ol class="breadcrumb">
   <li><div>Home</a></li>
@@ -9,8 +9,8 @@ include("functions/header.php");
 <h1 class="page-header">All Users</h1>
 <?php
 //SECURITY INFORMATIONAL INSTALLATION **IMPORTANT**
-if (file_exists("../install")) {
-  ?>
+if (file_exists('../install')) {
+    ?>
 <div class="alert alert-danger alert-dismissible fade in uk-animation-shake" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -20,6 +20,7 @@ if (file_exists("../install")) {
 
 </div>
 <?php
+
 }
 ?>
 <p>
@@ -34,26 +35,23 @@ if (file_exists("../install")) {
   </thead>
   <tbody>
        <?php
-$con=mysqli_connect($hostname,$username,$password,$db_name);
-$sql="SELECT * FROM Administrators";
+$con = mysqli_connect($hostname, $username, $password, $db_name);
+$sql = 'SELECT * FROM Administrators';
 
-if ($result=mysqli_query($con,$sql))
-  {
-  // Fetch one and one row
-  while ($row=mysqli_fetch_row($result))
-    {
-    echo '
+if ($result = mysqli_query($con, $sql)) {
+    // Fetch one and one row
+  while ($row = mysqli_fetch_row($result)) {
+      echo '
           <tr>';
-          echo '<td>' . $row[1] . '<td>';
-          if ($_SESSION["username"] == $row[1])
-          {
-            echo '<td></td>';
-          } else {
-        echo '<td><a href="action.php?usr=' . $row[0] . '&deluser">Delete</a></td>';
-          }
-        
-        echo  '</tr>';
-    }
+      echo '<td>'.$row[1].'<td>';
+      if ($_SESSION['username'] == $row[1]) {
+          echo '<td></td>';
+      } else {
+          echo '<td><a href="action.php?usr='.$row[0].'&deluser">Delete</a></td>';
+      }
+
+      echo  '</tr>';
+  }
   // Free result set
   mysqli_free_result($result);
 }
@@ -86,5 +84,5 @@ mysqli_close($con);
 </div>
 </div>
 <?php
-include("functions/footer.php");
+include 'functions/footer.php';
 ?>

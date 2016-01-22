@@ -1,80 +1,81 @@
 <?php
-$host = $_POST["hostname"];
-$username = $_POST["username"];
-$password = $_POST["password"];
-$database = $_POST["database"];
+
+$host = $_POST['hostname'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$database = $_POST['database'];
 //Verify Connection
 $link = mysqli_connect($host, $username, $password, $database);
 /* check connection */
 if (mysqli_connect_errno()) {
-    header("Location: index.php?error");
+    header('Location: index.php?error');
     die();
 }
 /* check if server is alive */
 if (!mysqli_ping($link)) {
-header("Location: index.php?error");
-   die();
+    header('Location: index.php?error');
+    die();
 }
 $conn = new mysqli($hostname, $username, $password, $database);
- $sql = "CREATE TABLE Administrators (
+ $sql = 'CREATE TABLE Administrators (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 username VARCHAR(1000),
 password VARCHAR(1000)
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE Settings (
+ $sql = 'CREATE TABLE Settings (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 code VARCHAR(1000),
 value VARCHAR(1000)
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE Storage (
+ $sql = 'CREATE TABLE Storage (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 name VARCHAR(99999),
 value TEXT
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE Blockedips (
+ $sql = 'CREATE TABLE Blockedips (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 blocked VARCHAR(99999),
 value TEXT
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE Posts (
+ $sql = 'CREATE TABLE Posts (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 name VARCHAR(99999),
 author VARCHAR(99999),
 value TEXT
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE Pages (
+ $sql = 'CREATE TABLE Pages (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 name VARCHAR(99999),
 value TEXT
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE Items (
+ $sql = 'CREATE TABLE Items (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 name VARCHAR(99999),
 cost VARCHAR(99999),
 description TEXT
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE Orders (
+ $sql = 'CREATE TABLE Orders (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 email VARCHAR(99999),
 Products TEXT
-)";
- $sql = "CREATE TABLE Comments (
+)';
+ $sql = 'CREATE TABLE Comments (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 name VARCHAR(99999),
 about TEXT
-)";
+)';
 $conn->query($sql);
- $sql = "CREATE TABLE dragdrop (
+ $sql = 'CREATE TABLE dragdrop (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 value TEXT
-)";
+)';
 $conn->query($sql);
  $sql = "CREATE TABLE Plugins (
 filename varchar(127) collate utf8_bin default NULL,
@@ -82,7 +83,7 @@ filename varchar(127) collate utf8_bin default NULL,
 		PRIMARY KEY  (`filename`)
 )";
 $conn->query($sql);
-$sql = "INSERT INTO Administrators (id, username, password) VALUES ('1', '" . $conn->real_escape_string(addslashes($_POST["username_p"]))."', '" .md5($conn->real_escape_string($_POST["password_p"]))."')";
+$sql = "INSERT INTO Administrators (id, username, password) VALUES ('1', '".$conn->real_escape_string(addslashes($_POST['username_p']))."', '".md5($conn->real_escape_string($_POST['password_p']))."')";
 $conn->query($sql);
 $sql = "INSERT INTO Settings (id, code, value) VALUES ('1', 'title','Multisite Central')";
 $conn->query($sql);
@@ -97,18 +98,19 @@ $sql = "INSERT INTO Settings (id, code, value) VALUES ('5', 'api','')";
 $conn->query($sql);
 $conn->close();
 $data = '<?php
-            $hostname="' . $host . '";
-            $username="' . $username . '";
-            $password="' . $password . '";
-            $db_name="' . $database . '";
+            $hostname="'.$host.'";
+            $username="'.$username.'";
+            $password="'.$password.'";
+            $db_name="'.$database.'";
             ?>';
-        $file = "../config.php";
+        $file = '../config.php';
 
         $handle = fopen($file, 'a');
-        if (fwrite($handle, $data) === FALSE) { echo "Can not write to (".$file.")"; }
+        if (fwrite($handle, $data) === false) {
+            echo 'Can not write to ('.$file.')';
+        }
 
         fclose($handle);
-header("Location: index.php?install");
+header('Location: index.php?install');
 /* close connection */
 mysqli_close($link);
-?>

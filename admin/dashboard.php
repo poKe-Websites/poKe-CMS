@@ -1,7 +1,7 @@
 
 <?php
-include("../config.php");
-include("functions/header.php");
+include '../config.php';
+include 'functions/header.php';
 ?>
 <ol class="breadcrumb">
   <li><div>Home</a></li>
@@ -10,7 +10,7 @@ include("functions/header.php");
 <h1 class="page-header">Dashboard</h1>
 
 <div class="jumbotron">
-  <h1 class="display-3">Welcome Back, <?php echo $_SESSION["username"]; ?></h1>
+  <h1 class="display-3">Welcome Back, <?php echo $_SESSION['username']; ?></h1>
   <p class="lead">This is our brand new control panel designed using bootstrap 4.</p>
   <hr class="m-y-2">
   <p>It is still in development so do not expect much. This control panel will be a lot better than the old multisite control panel.</p>
@@ -25,7 +25,7 @@ require_once 'functions/update.class.php';
 $update = new Update('http://tecflare.cu.cc/cdn-packages/latest.zip', 'http://tecflare.cu.cc/cdn-packages/version.ini');
 // Check if a new version is available.
 if ($update->checkVersion()) {
-?>
+    ?>
 <div class="alert alert-danger alert-dismissible fade in uk-animation-shake" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -35,12 +35,13 @@ if ($update->checkVersion()) {
 
 </div>
 <?php
+
 }
 ?>
 <?php
 //SECURITY INFORMATIONAL INSTALLATION **IMPORTANT**
-if (file_exists("../install")) {
-  ?>
+if (file_exists('../install')) {
+    ?>
 <div class="alert alert-danger alert-dismissible fade in uk-animation-shake" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -50,6 +51,7 @@ if (file_exists("../install")) {
 
 </div>
 <?php
+
 }
 ?>
 <style>
@@ -87,13 +89,12 @@ if (file_exists("../install")) {
 </style><div id="tile"  class="col-sm-6 card card-block">
 <h1><?php
     $count = 0;
-$con=mysqli_connect($hostname,$username, $password, $db_name);
-$sql="SELECT * FROM Administrators";
-$result=mysqli_query($con,$sql);
- while ($row=mysqli_fetch_row($result))
-    {
+$con = mysqli_connect($hostname, $username, $password, $db_name);
+$sql = 'SELECT * FROM Administrators';
+$result = mysqli_query($con, $sql);
+ while ($row = mysqli_fetch_row($result)) {
      $count = $count + 1;
-    }
+ }
    mysqli_free_result($result);
     mysqli_close($con);
     echo $count;
@@ -123,5 +124,5 @@ $result=mysqli_query($con,$sql);
 
 
 <?php
-include("functions/footer.php");
+include 'functions/footer.php';
 ?>

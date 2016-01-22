@@ -58,7 +58,7 @@ if (!isset($_SESSION["username"])) {
  
   <div class="nav navbar-nav">
       <button class="navbar-toggler nav-item nav-link active " type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-    &#9776;
+    <i class="fa fa-th"></i>
   </button>
     <a class="nav-item nav-link active" href="#">poKe <span class="sr-only">(current)</span></a>
 

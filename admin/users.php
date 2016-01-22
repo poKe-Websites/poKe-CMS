@@ -22,7 +22,9 @@ if (file_exists("../install")) {
 <?php
 }
 ?>
-
+<p>
+  This is where you can create accounts, if you are looking where to change your password, it will be in the "Accounts" Section.
+</p>
 <table class="table table-inverse">
   <thead>
     <tr>
@@ -64,9 +66,11 @@ mysqli_close($con);
     Add User
   </a>
   <div class="collapse" id="collapse">
+    <div class="card card-block">
  <div class="page-header">
-<h1>Add User</h1>
+ <h4 class="card-title">Add User</h4>
 </div>
+<p class="card-text">
  <form method="POST" action="action.php?mkuser">
     <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">Username</span>
@@ -78,6 +82,8 @@ mysqli_close($con);
 </div>
 <input type="submit" class="btn btn-info" value="Create" role="button">
 </form>
+</p>
+</div>
 </div>
 <?php
 include("functions/footer.php");

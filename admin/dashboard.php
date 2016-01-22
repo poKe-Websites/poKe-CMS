@@ -18,7 +18,25 @@ include("functions/header.php");
    
   </p>
 </div>
+<?php
+// Include the update class.
+require_once 'functions/update.class.php';
+// Init the Update class.
+$update = new Update('http://tecflare.cu.cc/cdn-packages/latest.zip', 'http://tecflare.cu.cc/cdn-packages/version.ini');
+// Check if a new version is available.
+if ($update->checkVersion()) {
+?>
+<div class="alert alert-danger alert-dismissible fade in uk-animation-shake" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
 
+  <i class="fa fa-times fa-fw"></i><strong>Security Warning!</strong> An update is availible. <a href="update.php" class="btn btn-primary">Update Now</a>
+
+</div>
+<?php
+}
+?>
 <?php
 //SECURITY INFORMATIONAL INSTALLATION **IMPORTANT**
 if (file_exists("../install")) {

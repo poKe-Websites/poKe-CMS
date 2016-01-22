@@ -39,4 +39,11 @@ mysqli_query($con,$sql);
 mysqli_close($con);
 header("Location: users.php");
 }
+if (isset($_GET["slider"])) {
+move_uploaded_file($_FILES["file_source_1"]["tmp_name"], "../uploads/one.png");
+move_uploaded_file($_FILES["file_source_2"]["tmp_name"], "../uploads/two.png");
+move_uploaded_file($_FILES["file_source_3"]["tmp_name"], "../uploads/three.png");
+move_uploaded_file($_FILES["file_source_4"]["tmp_name"], "../uploads/four.png");
+header("Location: slider.php?ok");
+}
 ?>

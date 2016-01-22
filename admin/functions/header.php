@@ -1,20 +1,20 @@
 <?php
 session_start();
-include("functions/rollbar.php");
-$config = array(
+include 'functions/rollbar.php';
+$config = [
     // required
     'access_token' => '8545589ebc374e4ca8e70db5d302c0f4',
     // optional - environment name. any string will do.
     'environment' => 'test',
-);
+];
 
 $set_exception_handler = false;
 $set_error_handler = false;
 Rollbar::init($config, $set_exception_handler, $set_error_handler);
 
-if (!isset($_SESSION["username"])) {
-  header("Location: index.php");
-  die();
+if (!isset($_SESSION['username'])) {
+    header('Location: index.php');
+    die();
 }
 
 ?>
@@ -67,7 +67,7 @@ if (!isset($_SESSION["username"])) {
 <!-- Single button -->
 <div class="btn-group">
   <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   <i class="fa fa-user fa-fw"></i><?php echo $_SESSION["username"]; ?>
+   <i class="fa fa-user fa-fw"></i><?php echo $_SESSION['username']; ?>
   </button>
   <div class="dropdown-menu">
     <a class="dropdown-item" href="#"><i class="fa fa-cog fa-fw"></i>Settings</a>

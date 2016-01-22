@@ -1,6 +1,6 @@
 
 <?php
-include("functions/header.php");
+include 'functions/header.php';
 ?>
 <ol class="breadcrumb">
   <li><div>Home</a></li>
@@ -9,8 +9,8 @@ include("functions/header.php");
 <h1 class="page-header">My Account</h1>
 <?php
 //SECURITY INFORMATIONAL INSTALLATION **IMPORTANT**
-if (file_exists("../install")) {
-  ?>
+if (file_exists('../install')) {
+    ?>
 <div class="alert alert-danger alert-dismissible fade in uk-animation-shake" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -20,6 +20,7 @@ if (file_exists("../install")) {
 
 </div>
 <?php
+
 }
 ?>
 <p>Changing your password is a great idea because it prevents hackers.</p>
@@ -27,7 +28,7 @@ if (file_exists("../install")) {
   <div class="form-group row">
     <label for="inputPassword3" class="col-sm-2 form-control-label">Password</label>
     <div class="col-sm-10">
-        <input type="hidden" name="username" value="<?php echo $_SESSION["username"]; ?>">
+        <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
       <input type="password" name="password_ch" class="form-control" id="inputPassword3" placeholder="Password">
     </div>
   </div>
@@ -38,5 +39,5 @@ if (file_exists("../install")) {
   </div>
   </form>
 <?php
-include("functions/footer.php");
+include 'functions/footer.php';
 ?>

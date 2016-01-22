@@ -24,7 +24,8 @@
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand">poKe Admin</h3>
-           <?php if (isset($_GET["alert"])) { ?>
+           <?php if (isset($_GET['alert'])) {
+    ?>
             <!--Alert-->  <nav class="nav nav-masthead">
            <div class="ns-box ns-growl ns-effect-slide ns-type-notice ns-show">
 	<div class="ns-box-inner">
@@ -36,22 +37,26 @@
 </div>
 	</div>
 	<?php
-           } else {
-	?>
+
+} else {
+    ?>
 	         <!--Alert-->  <nav class="nav nav-masthead">
            <div class="ns-box ns-growl ns-effect-slide ns-type-notice ns-show">
 	<div class="ns-box-inner">
 
 	</div>
 	<?php
-           }
+
+}
            ?>
 	<span class="ns-close"></span>
 </div>	
               </nav>
             </div>
           </div>
-          <div style="background-color: rgba(245, 245, 245, 0.4);" class="card  <?php if (isset($_GET["alert"])) { ?>uk-animation-shake<?php } ?>">
+          <div style="background-color: rgba(245, 245, 245, 0.4);" class="card  <?php if (isset($_GET['alert'])) {
+    ?>uk-animation-shake<?php 
+} ?>">
 <form class="form-signin" method="post" action="validate.php">
     <img src="images/photo.png" alt="Card image">
           <div class="inner cover">

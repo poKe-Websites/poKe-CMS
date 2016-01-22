@@ -24,16 +24,14 @@
   </div>
 </div>
 <?php
-if (!isset($_GET["install"]))
-{
+if (!isset($_GET['install'])) {
     ?>
 <div class="alert alert-info" role="alert">
   <strong>Welcome</strong> Thank you for installing poKe. To install please press install.
 </div>
      <?php
-        if (isset($_GET["error"]))
-        {
-          ?>
+        if (isset($_GET['error'])) {
+            ?>
           <div class="alert alert-warning alert-dismissible fade in" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -43,8 +41,9 @@ if (!isset($_GET["install"]))
 </div>
 
           <?php
+
         }
-        ?>
+    ?>
       
 
 <!-- Modal -->
@@ -103,8 +102,9 @@ if (!isset($_GET["install"]))
 
  
  <?php
+
 } else {
-?>
+    ?>
 <div class="alert alert-success" role="alert">
   <strong>Well done!</strong> You successfully installed to poKe System.
 </div>
@@ -113,6 +113,7 @@ if (!isset($_GET["install"]))
   <li class="list-group-item">2. Login to the Administration Area</li>
 </ul></center>
 <?php
+
 }
 ?>
 <footer class="footer">

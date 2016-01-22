@@ -1,6 +1,6 @@
 <?php
-include("../config.php");
-include("functions/header.php");
+include '../config.php';
+include 'functions/header.php';
 ?>
 <ol class="breadcrumb">
   <li><div>Home</a></li>
@@ -9,8 +9,8 @@ include("functions/header.php");
 <h1 class="page-header">Slider <span class="label label-default">New</span></h1>
 <?php
 //SECURITY INFORMATIONAL INSTALLATION **IMPORTANT**
-if (file_exists("../install")) {
-  ?>
+if (file_exists('../install')) {
+    ?>
 <div class="alert alert-danger alert-dismissible fade in uk-animation-shake" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -21,15 +21,17 @@ if (file_exists("../install")) {
 </div>
 
 <?php
+
 }
 ?>
 <?php
-if (isset($_GET["ok"])) {
-	?>
+if (isset($_GET['ok'])) {
+    ?>
 	<div class="alert alert-success alert-dismissible fade in uk-animation-shake" role="alert">
 		Slider image updated successfully.
 		</div>
 	<?php
+
 }
 ?>
 <p>The slider images will make your website look better. We recommend 900x500 but it is really up to you.</p>
@@ -89,5 +91,5 @@ if (isset($_GET["ok"])) {
 </div>
 	</form>
 <?php
-include("functions/footer.php");
+include 'functions/footer.php';
 ?>

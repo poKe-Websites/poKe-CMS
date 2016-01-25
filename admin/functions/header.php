@@ -1,8 +1,8 @@
 <?php
  if (file_exists('../install')) {
-    echo "Please Delete Install Directiory";
-    die();
-    }
+     echo 'Please Delete Install Directiory';
+     die();
+ }
 session_start();
 include 'functions/rollbar.php';
 $config = [

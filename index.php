@@ -4,9 +4,9 @@ if (!file_exists('config.php')) {
     die();
 }
  if (file_exists('install')) {
-    echo "Please Delete Install Directiory";
-    die();
-    }
+     echo 'Please Delete Install Directiory';
+     die();
+ }
 ?>
 
 <!DOCTYPE html>

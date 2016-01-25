@@ -29,7 +29,7 @@ if (isset($_GET['password'])) {
     //die('update Administrators set username="' .addslashes($_POST["username"]) .'", password="' . md5(addslashes($_POST["password_ch"])) .'" where username=' . $_POST["username"]);
     $con = mysqli_connect($hostname, $username, $password, $db_name);
 
-    $sql = 'update Administrators set username="'.addslashes($_POST['username']).'", password="'.substr(sha1($_POST['password_ch'],PASSWORD_BCRYPT),-10).'" where username="'.$_POST['username'].'"';
+    $sql = 'update Administrators set username="'.addslashes($_POST['username']).'", password="'.substr(sha1($_POST['password_ch'], PASSWORD_BCRYPT), -10).'" where username="'.$_POST['username'].'"';
 
     mysqli_query($con, $sql);
     mysqli_close($con);
@@ -46,9 +46,7 @@ if (isset($_GET['deluser'])) {
 if (isset($_GET['mkuser'])) {
     $con = mysqli_connect($hostname, $username, $password, $db_name);
 
-    $sql = 'INSERT INTO Administrators (id, username, password) VALUES ("'.rand(1, 100000).'","'.addslashes($_POST['usename']).'","'.substr(sha1($_POST['password'],PASSWORD_BCRYPT),-10).'")';
-
-  
+    $sql = 'INSERT INTO Administrators (id, username, password) VALUES ("'.rand(1, 100000).'","'.addslashes($_POST['usename']).'","'.substr(sha1($_POST['password'], PASSWORD_BCRYPT), -10).'")';
 
     mysqli_query($con, $sql);
     mysqli_close($con);

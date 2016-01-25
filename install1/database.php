@@ -91,7 +91,7 @@ filename varchar(127) collate utf8_bin default NULL,
 )";
 $conn->query($sql);
 
-$sql = "INSERT INTO Administrators (id, username, password) VALUES ('1', '".$conn->real_escape_string(addslashes($_POST['username_p']))."', '".substr(sha1($_POST['password_p'],PASSWORD_BCRYPT),-10)."')";
+$sql = "INSERT INTO Administrators (id, username, password) VALUES ('1', '".$conn->real_escape_string(addslashes($_POST['username_p']))."', '".substr(sha1($_POST['password_p'], PASSWORD_BCRYPT), -10)."')";
 
 $sql = "INSERT INTO Administrators (id, username, password) VALUES ('1', '".$conn->real_escape_string(addslashes($_POST['username_p']))."', '".md5($conn->real_escape_string(password_hash($_POST['password_p'], PASSWORD_BCRYPT)))."')";
 

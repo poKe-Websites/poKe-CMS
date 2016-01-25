@@ -1,3 +1,15 @@
+<?php
+session_start();
+//Secure Code
+if (file_exists("install.lock") && ! isset($_SESSION["install_lock"])) {
+  echo "The install.lock file exists, please delete it to reinstall";
+  die();
+}
+else {
+  file_put_contents("install.lock","");
+  $_SESSION["install_lock"] = "unlocked";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

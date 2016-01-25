@@ -3,6 +3,10 @@ if (!file_exists('config.php')) {
     header('Location: install/');
     die();
 }
+ if (file_exists('install')) {
+    echo "Please Delete Install Directiory";
+    die();
+    }
 ?>
 
 <!DOCTYPE html>

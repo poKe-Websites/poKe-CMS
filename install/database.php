@@ -90,7 +90,7 @@ filename varchar(127) collate utf8_bin default NULL,
 		PRIMARY KEY  (`filename`)
 )";
 $conn->query($sql);
-$sql = "INSERT INTO Administrators (id, username, password) VALUES ('1', '".$conn->real_escape_string(addslashes($_POST['username_p']))."', '".md5($conn->real_escape_string($_POST['password_p']))."')";
+$sql = "INSERT INTO Administrators (id, username, password) VALUES ('1', '".$conn->real_escape_string(addslashes($_POST['username_p']))."', '".md5($conn->real_escape_string(password_hash($_POST['password_p'],PASSWORD_BCRYPT)))."')";
 $conn->query($sql);
 $sql = "INSERT INTO Settings (id, code, value) VALUES ('1', 'title','Multisite Central')";
 $conn->query($sql);
@@ -119,5 +119,6 @@ $data = '<?php
 
         fclose($handle);
 header('Location: index.php?install');
+die();
 /* close connection */
 mysqli_close($link);

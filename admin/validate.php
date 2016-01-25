@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
 include '../config.php';
-$pass =  substr(sha1($_POST['passwordp'],PASSWORD_BCRYPT),-10);
+$pass = substr(sha1($_POST['passwordp'], PASSWORD_BCRYPT), -10);
 
 $conn = new mysqli($hostname, $username, $password, $db_name);
 

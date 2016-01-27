@@ -1,5 +1,10 @@
 approve_by_comment: true
-approve_regex: '^:\+1:'
-reject_regex: '^No'
+approve_regex: 'Approved'
+reject_regex: '^Denied'
 reset_on_push: true
 author_approval: ignored
+reviewers:
+  members:
+  - dodiaraculus17
+  name: default
+  required: 1

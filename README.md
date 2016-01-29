@@ -35,4 +35,4 @@ After you are complete delete your install director.
 
 Contributing
 =============
-Contributors are very important for our project because it is the future. Create Your Own Website
+Contributors are very important for our project because it is the future. Create Your Own Website here today and view our contributors by [clicking here](https://github.com/poKe-Websites/poKe-CMS/graphs/contributors).

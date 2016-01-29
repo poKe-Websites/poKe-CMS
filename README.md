@@ -35,4 +35,4 @@ After you are complete delete your install director.
 
 Contributing
 =============
-Contributors are very important for our project because it is the future.
+Contributors are very important for our project because it is the future. Create Your Own Website

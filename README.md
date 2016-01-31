@@ -2,8 +2,8 @@ poKe Multimedia editor
 =============
 
 [![StyleCI](https://styleci.io/repos/49139219/shield)](https://styleci.io/repos/49139219)
-
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/4f931c37-3c45-45a1-bf09-45478996bde6/mini.png)](https://insight.sensiolabs.com/projects/4f931c37-3c45-45a1-bf09-45478996bde6)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/5f11be20f33a4fc39878d1daab86d3c9)](https://www.codacy.com/app/dodiaraculus/poKe-CMS)
 
 Our Script will change the way websites are created. Our system will come with many features including support with popular seo tools and a user permission system. We will also be planning to add the features below:
 
@@ -35,4 +35,4 @@ After you are complete delete your install director.
 
 Contributing
 =============
-Contributors are very important for our project because it is the future.
+Contributors are very important for our project because it is the future. Create Your Own Website here today and view our contributors by [clicking here](https://github.com/poKe-Websites/poKe-CMS/graphs/contributors).
